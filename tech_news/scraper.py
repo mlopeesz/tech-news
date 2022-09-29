@@ -6,7 +6,7 @@ import time
 BLOG_URL = "https://blog.betrybe.com/"
 
 
-def fetch(url: str) -> str | None:
+def fetch(url: str):
     try:
         response = requests.get(url, headers={"user-agent": "Fake user-agent"})
         time.sleep(1)
@@ -19,7 +19,7 @@ def fetch(url: str) -> str | None:
 
 
 # Requisito 2
-def scrape_novidades(html_content):
+def scrape_novidades(html_content: str):
     """Seu código deve vir aqui"""
 
 
