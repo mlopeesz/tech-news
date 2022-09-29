@@ -20,7 +20,7 @@ def fetch(url: str):
 
 
 # Requisito 2
-def scrape_novidades(html_content: str) -> list[str]:
+def scrape_novidades(html_content: str):
     selector = Selector(text=html_content)
     news_url = selector.css(".cs-overlay-link ::attr(href)").getall()
     return news_url
